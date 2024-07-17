@@ -9,8 +9,12 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-
-}
+    let choice = prompt("Enter a choice: Rock, Paper, or Scissors").toLowerCase().trim();
+    while (choice != "rock" && choice != "paper" && choice != "scissors") {
+        choice = prompt("Please enter a valid option: Rock, Paper, or Scissors").toLowerCase().trim();
+    }
+    return choice;
+}   
 
 function playRound(humanChoice, computerChoice) {
 
@@ -19,5 +23,3 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
 
 }
-
-console.log(getComputerChoice());
